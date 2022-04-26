@@ -8,9 +8,10 @@
   </span>
 </mat-toolbar>
 
-<mat-drawer-container class="example-container" autosize>
+<!-- <mat-drawer-container class="example-container" autosize>
   <mat-drawer #drawer class="example-sidenav" mode="side">
     <mat-nav-list>
+      <a mat-list-item>test</a>
     </mat-nav-list>
   </mat-drawer>
 
@@ -18,4 +19,22 @@
 
   </div>
 
+</mat-drawer-container> -->
+
+<mat-drawer-container class="side-nav">
+  <mat-drawer #drawer mode="side" opened class="side-nav-drawer">
+    <mat-nav-list>
+      <a mat-list-item style="font-size: 16px;" routerLink="">
+        <mat-icon aria-hidden="false" aria-label="Example home icon" style="padding-right: 10px;">home</mat-icon>
+        Home
+      </a>
+      <a mat-list-item style="font-size: 16px;" routerLink="/teamviewer">
+        <mat-icon aria-hidden="false" aria-label="Example home icon" style="padding-right: 10px;">computer</mat-icon>
+        TeamViewer IDs
+      </a>
+    </mat-nav-list>
+  </mat-drawer>
+  <mat-drawer-content>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
 </mat-drawer-container>
